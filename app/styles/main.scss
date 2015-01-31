@@ -1,1 +1,74 @@
 // Your application styles go here
+
+
+/* ELEMENT STYLES */
+
+
+body{
+
+	background-color: #38A4DC;
+
+
+}
+
+
+/* HEADER STYLES */
+
+.header{
+
+	background-color: #38A4DC;
+
+
+}
+
+.bar-positive{
+
+	background-color: #38A4DC;
+
+
+
+}
+
+
+
+ .title h1{
+
+	font-size:2em;
+
+		
+	}
+
+/* SPLASH SCREEN */
+.splash{
+
+	width:100%;
+	height:200px;
+
+	margin:0;
+	padding:0;
+
+	background-color: #38A4DC;
+
+
+}
+
+/* MAP-VIEW SCREEN */
+
+.map-view{
+
+	position:relative;
+
+}
+
+.map-view-add{
+
+	position:absolute;
+	top:170px;
+	right:10px;
+
+	z-index:100;
+}
+
+.ion-nav-view {
+background-color: white !important;
+}
