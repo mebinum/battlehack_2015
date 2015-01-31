@@ -1,7 +1,7 @@
 'use strict';
 angular.module('WishpointApp.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('MapCtrl', function($scope) {
 })
 
 .controller('FriendsCtrl', function($scope, Friends) {
