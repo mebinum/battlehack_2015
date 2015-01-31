@@ -66,6 +66,19 @@ angular.module('WishpointApp', ['ionic', 'ngCordova', 'uiGmapgoogle-maps', 'conf
   });
 
 
+  $stateProvider.state('feed', {
+    url: '/feed',
+    //abstract: true,
+    templateUrl: 'templates/feed.html'
+  });
+
+  $stateProvider.state('checkout', {
+    url: '/checkout',
+    //abstract: true,
+    templateUrl: '/phpServer/classes/donate/donate.php'
+  });
+
+
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/map');

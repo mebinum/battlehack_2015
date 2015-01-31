@@ -1,0 +1,56 @@
+<ion-view title="Feed"  ng-init="init()">
+	<div class="wish-view">
+	    <div class="wish-map">
+		    <!-- map begin -->
+		    <ui-gmap-google-map  center="map.center" zoom="map.zoom" control="map.control" draggable="true">
+			      <ui-gmap-markers models="map.markers" coords="'coords'" icon="'icon'">
+			      </ui-gmap-markers>
+			    </ui-gmap-google-map>
+	    </div>
+	    <!-- map end -->
+	    <div class="wish-image">
+	    	 <img class="list-primary-tile__img" src="images/southbank.jpg">
+	    </div>
+	    <div class="well-details">
+		    <h3 class="name">{{well.name}}</h3>
+		    <h2>${{well.totalRaised | number:2}}</h2>
+		    <h5>Raised</h5>
+		    <div class="wish-actions">
+		    	<span class="left">
+		    		<h2>{{well.wishCount}}</h2>
+		    		<h5>WISHES</h5>
+		    	</span>
+		    	<span>
+		    		<h2>{{well.likeCount}}</h2>
+		    		<h5>LIKES</h5>
+		    	</span>
+		    </div>	
+		    <div class="wish-feed">
+				<ion-scroll zooming="true" direction="y" style="height: 700px" >
+					<div class="grid">
+					    <div class="grid__col4">
+					        <div class="card">
+					            <div class="card__img card__img--top">
+					                <img src="images/feed/southbank/sunset.jpg">
+					                <span class="fs-headline tc-white-1 display-block">Christopher Bartlett</span>
+					            </div>
+
+					            <div class="p+">
+					                <span class="fs-subhead tc-black-2 display-block">Lorem Ipsum</span>
+
+					                <div class="paragraph fs-body-1">
+					                    <p>
+					                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tristique orci a lacinia malesuada.
+					                    </p>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+
+					</div>
+
+				</ion-scroll>
+		    </div>
+	   </div>
+	</div>
+</ion-view>

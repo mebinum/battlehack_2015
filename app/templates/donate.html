@@ -20,33 +20,22 @@
 	    	<img src="images/concern.jpg">
 	    	<h5>To unlock this Wish Point please make a donation</h5>
 	    </div>
-
-	    <form name="donate" class="donate-form">
-<iframe src='https://payflowlink.paypal.com?SECURETOKEN=$securetoken&SECURETOKENID=$securetokenid&MODE=$mode' width='480' height='565' border='0' frameborder='0' scrolling='no' allowtransparency='true'>\n</iframe>
-		    <div class="wish-donate">
-		    	<div class="list">
-				  <label class="item item-input item-floating-label">
-				    <span class="input-label">Amount</span>
-				    <input type="text" placeholder="Amount">
-				  </label>
-				  <label class="item item-input item-floating-label">
-				    <span class="input-label">Credit Card Number</span>
-				    <input type="text" placeholder="Credit Card Number">
-				  </label>
-				  <label class="item item-input item-floating-label wish-donate-half">
-				    <span class="input-label">EXP DATE</span>
-				    <input type="text" placeholder="EXP DATE">
-				  </label>
-				  <label class="item item-input item-floating-label wish-donate-half">
-				    <span class="input-label">CVV</span>
-				    <input type="text" placeholder="CVV">
-				  </label>
-				</div>
-				<a href="#/make-wish">
-		    		<button class="btn btn--m btn--blue btn--raised" lx-ripple>WISH</button>
-		    	</a>
-		    </div>
+	    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+		<form id="checkout" method="post" action="/checkout">
+		  <div id="dropin"></div>
+		  <input type="submit" value="Pay $10">
 		</form>
+<!--
+		<script>
+
+			braintree.setup(
+			  "MIIBCgKCAQEAwpN88KQ3BvlFkLl/8X/C+fazfAoPWFdHrPdLrOix7fr8EaWeYw8b7Pf48KEweQdxBa28eLYCR+Lp28q8OS9N1cDjkVwx22IJ2lP5wkqqUvIgyCytJMfr6XKOolaToZoQGxglB6aSLgG9WbdsfqhQeXg8FropQwJn15ix3wlrRpqa3ofLfspVU6Pt/qBuMn7+Kqu/QQurQrB+SXf0HVBUpvn4JB5THg/sT0Ix/GjcK5N2np0fiD5QLLCARV17TrwC8ykK9p5ve++hKTl9XDx9SsRfSC6lAPOpb7reEJghv5aOjbg3pprTuPiePHnbgtltxSEfE7yv2JoezoEnKvP2zwIDAQAB",
+			  'dropin', {
+			    container: 'dropin'
+			  });
+		
+		</script>
+-->
 	</div>
 </ion-scroll>
 </ion-view>

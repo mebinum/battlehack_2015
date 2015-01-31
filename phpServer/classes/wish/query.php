@@ -64,7 +64,6 @@ $origLng = 144.9651480;//floatval($_GET['lng']);
 	$result = array();
 	$result['status'] = $status;
 
-	echo count($selected);
 
 	while($row = mysql_fetch_array($selected)){
 		$wishPoint = array();
@@ -88,6 +87,46 @@ $origLng = 144.9651480;//floatval($_GET['lng']);
 			$charity['email'] = $row[8];
 
 		$wishPoint['charity'] = $charity;
+
+
+
+		//FEED
+		$select = "SELECT * 
+				FROM  `wishpoint`.`feed` 
+				WHERE  `wishId` = $row[0]";
+
+
+			//mySQL query
+			$feedData = mysql_query($select, $connection);
+			if(!$feedData){
+		
+				$status = "Failed";
+				$message = "Hal9000 Dave the pheets venue tag query query failed. ".mysql_error();
+		
+			}else{
+		
+				$status = "Successful";
+				$message = "Hal9000: Dave the pheets venue tag query was successful.";
+
+			}
+
+		while($thisRow = mysql_fetch_array($feedData)){
+
+			$feed = array();
+
+			$feed['id'] = $thisRow[0];
+			$feed['wishId'] = $thisRow[1];
+			$feed['uId'] = $thisRow[2];
+			$feed['userName'] = $thisRow[3];
+			$feed['userImageUrl'] = $thisRow[4];
+			$feed['title'] = $thisRow[5];
+			$feed['text'] = $thisRow[6];
+			$feed['imageUrl'] = $thisRow[7];
+
+
+		array_push($wishPoint, $feed);
+
+		}
 
 		array_push($result, $wishPoint);
 	}

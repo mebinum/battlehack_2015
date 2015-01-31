@@ -99,31 +99,31 @@ angular.module('WishpointApp.controllers', [])
 		}, true);
 	}
 ])
-	.controller('WellCtrl', function($scope, $stateParams, BlueCats) {
-		$scope.init = function() {
-			$scope.well = BlueCats.getWell($stateParams.wellId);
-			$scope.map = {};
-			$scope.map.control = {};
-			$scope.map.center = {
+.controller('WellCtrl', function($scope, $stateParams, BlueCats) {
+	$scope.init = function() {
+		$scope.well = BlueCats.getWell($stateParams.wellId);
+		$scope.map = {};
+		$scope.map.control = {};
+		$scope.map.center = {
+			'latitude': $scope.well.location.lat,
+			'longitude': $scope.well.location.lng
+		};
+		$scope.map.zoom = 12;
+		$scope.map.markers = [];
+		var marker = {
+			id : $stateParams.wellId,
+			'coords': {
 				'latitude': $scope.well.location.lat,
 				'longitude': $scope.well.location.lng
-			};
-			$scope.map.zoom = 12;
-			$scope.map.markers = [];
-			var marker = {
-				id : $stateParams.wellId,
-				'coords': {
-					'latitude': $scope.well.location.lat,
-					'longitude': $scope.well.location.lng
-				},
-				'icon':{
-					url: 'images/marker.png',
-					scaledSize: new google.maps.Size(25, 30)
-				}
-			};
-			$scope.map.markers.push(marker);
+			},
+			'icon':{
+				url: 'images/marker.png',
+				scaledSize: new google.maps.Size(25, 30)
+			}
 		};
-	})
+		$scope.map.markers.push(marker);
+	};
+})
 	.controller('DonateCtrl', function($scope, $stateParams, BlueCats) {
 		$scope.init = function() {
 			$scope.well = BlueCats.getWell($stateParams.wellId);
