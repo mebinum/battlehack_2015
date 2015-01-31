@@ -17,15 +17,9 @@ $nonce = $_POST["payment_method_nonce"];
 
 
 $result = Braintree_Transaction::sale(array(
-  'amount' => $_POST['amount'],
+  'amount' => '1.00',
   'paymentMethodNonce' => 'nonce-from-the-client'
 ));
 
 
-
-/*
-
-CALL BACK
-
-/*
 ?>

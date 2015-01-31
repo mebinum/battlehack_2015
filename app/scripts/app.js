@@ -8,7 +8,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('WishpointApp', ['ionic', 'ngCordova', 'uiGmapgoogle-maps', 'config', 'WishpointApp.controllers', 'WishpointApp.services'])
 
-.run(function($ionicPlatform, BlueCats) {
+.run(function($ionicPlatform, $rootScope, BlueCats,$window,$location) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -23,6 +23,20 @@ angular.module('WishpointApp', ['ionic', 'ngCordova', 'uiGmapgoogle-maps', 'conf
     BlueCats.onDeviceReady();
 
   });
+
+   $rootScope.$on('$routeChangeSuccess', function() {
+      if ($location.path('') === '/donate') {
+        $window.alert('You hit donate');
+        console.log('donate page');
+        braintree.setup(
+          'MIIBCgKCAQEAwpN88KQ3BvlFkLl/8X/C+fazfAoPWFdHrPdLrOix7fr8EaWeYw8b7Pf48KEweQdxBa28eLYCR+Lp28q8OS9N1cDjkVwx22IJ2lP5wkqqUvIgyCytJMfr6XKOolaToZoQGxglB6aSLgG9WbdsfqhQeXg8FropQwJn15ix3wlrRpqa3ofLfspVU6Pt/qBuMn7+Kqu/QQurQrB+SXf0HVBUpvn4JB5THg/sT0Ix/GjcK5N2np0fiD5QLLCARV17TrwC8ykK9p5ve++hKTl9XDx9SsRfSC6lAPOpb7reEJghv5aOjbg3pprTuPiePHnbgtltxSEfE7yv2JoezoEnKvP2zwIDAQAB',
+          'dropin', {
+            container: 'dropin'
+          });
+      }
+    });
+
+
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -74,7 +88,7 @@ angular.module('WishpointApp', ['ionic', 'ngCordova', 'uiGmapgoogle-maps', 'conf
   $stateProvider.state('checkout', {
     url: '/checkout',
     //abstract: true,
-    templateUrl: '/phpServer/classes/donate/donate.php'
+    templateUrl: 'http://www.wishpoint.org/server/classes/donate/donate.php'
   });
 
   // if none of the above states are matched, use this as the fallback
