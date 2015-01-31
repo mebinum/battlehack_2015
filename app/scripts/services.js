@@ -32,7 +32,16 @@ angular.module('WishpointApp.services', [])
     }
   };
 })
-
+.service('Well', ['$q',
+  function Well($q) {
+    return {
+      get: function (wellId) {
+        return {
+          'id': wellId
+        };
+      }
+    };
+  }])
 .factory('BlueCats', ['$rootScope',
   function($rootScope) {
     //Update with the api token for your app from https://app.bluecats.com

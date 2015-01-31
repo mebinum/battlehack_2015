@@ -1,0 +1,48 @@
+<ion-view title="Wish Point">
+<ion-scroll zooming="true" direction="y" style="width: 500px; height: 700px">
+
+	<div class="wish-view">
+	    <div class="wish-map">
+	    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
+	          &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+	          &markers=color:red%7Clabel:C%7C40.718217,-73.998284" >
+	     </div>
+	    <div class="wish-image">
+	    	 <img class="list-primary-tile__img" src="images/southbank.jpg">
+
+	    </div>
+	    <h3>South Bank Bridge</h3>
+	    <h2>$1300.90</h2>
+	    <h5>Raised for</h5>
+ 		<div class="wish-make">
+	    	<img src="images/concern.jpg">
+	    	<h5>To unlock this Wish Point please make a donation</h5>
+	    </div>	    
+	    <ion-scroll zooming="true" direction="y" style="width: 500px; height: 500px">
+		    <div class="wish-donate">
+		    	<div class="list">
+				  <label class="item item-input item-floating-label">
+				    <span class="input-label">Amount</span>
+				    <input type="text" placeholder="Amount">
+				  </label>
+				  <label class="item item-input item-floating-label">
+				    <span class="input-label">Credit Card Number</span>
+				    <input type="text" placeholder="Credit Card Number">
+				  </label>
+				  <label class="item item-input item-floating-label wish-donate-half">
+				    <span class="input-label">EXP DATE</span>
+				    <input type="text" placeholder="EXP DATE">
+				  </label>
+				  <label class="item item-input item-floating-label wish-donate-half">
+				    <span class="input-label">CVV</span>
+				    <input type="text" placeholder="CVV">
+				  </label>
+				</div>
+					<a href="#/make-wish">
+			    		<button class="btn btn--m btn--blue btn--raised" lx-ripple>WISH</button>
+			    	</a>
+		    </div>
+	   </ion>
+	</div>
+<ion>
+</ion-view>

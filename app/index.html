@@ -19,14 +19,15 @@
     <script src='//maps.googleapis.com/maps/api/js?sensor=false&amp;key=AIzaSyBJW5_yZuNqXiQVyxtsrJRfNfj_kTdLLcc'></script>
   </head>
 
-  <body ng-app="WishpointApp" animation="slide-left-right-ios7">
-    
 
+  <body class="wishpoint" ng-app="WishpointApp" animation="slide-left-right-ios7">
     <!--
       The nav bar that will be updated as we navigate between views.
     -->
     <div class="bar bar-header bar-positive">
-        
+        <a href="#/map">
+            <img ng-src="images/android-icon.png" />
+        </a>
         <h1 class="title">Discover</h1>
         <button class="button icon ion-more"></button>
     </div>
@@ -35,9 +36,7 @@
       Templates are in the /templates folder (but you could also
       have templates inline in this html file if you'd like).
     -->
-    <ion-nav-view></ion-nav-view>
-  
-    <!-- build:js scripts/vendor.js -->
+        <ion-nav-view></ion-nav-view>
     <!-- <script src="vendor/someContribJs.js"></script> -->
     <!-- bower:js -->
     <script src="lib/jquery/dist/jquery.js"></script>

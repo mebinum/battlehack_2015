@@ -99,7 +99,9 @@ angular.module('WishpointApp.controllers', [])
 		}, true);
 	}
 ])
-
+.controller('WellCtrl', function($scope, $stateParams, Well) {
+	$scope.well = Well.get($stateParams.wellId);
+})
 .controller('FriendsCtrl', function($scope, Friends) {
 	$scope.friends = Friends.all();
 })
