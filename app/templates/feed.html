@@ -1,4 +1,6 @@
 <ion-view title="Feed"  ng-init="init()">
+<ion-scroll zooming="true" direction="y" style="height: 700px" >
+
 	<div class="wish-view">
 	    <div class="wish-map">
 		    <!-- map begin -->
@@ -26,7 +28,6 @@
 		    	</span>
 		    </div>	
 		    <div class="wish-feed">
-				<ion-scroll zooming="true" direction="y" style="height: 700px" >
 					<div class="grid">
 					    <div class="grid__col4">
 					        <div class="card">
@@ -49,8 +50,8 @@
 
 					</div>
 
-				</ion-scroll>
 		    </div>
 	   </div>
 	</div>
+</ion-scroll>
 </ion-view>

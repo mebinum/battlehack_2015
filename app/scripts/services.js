@@ -78,7 +78,6 @@ angular.module('WishpointApp.services', [])
           msg: msg
         });
       },
-
       watchBeacons: function() {
         var watchIdForEnterBeacon, watchIdForExitBeacon, watchIdForClosestBeacon = null;
 
@@ -87,7 +86,6 @@ angular.module('WishpointApp.services', [])
           app.receivedEvent('apptokenrequired');
           return;
         }
-
         var beaconWatchOptions = {
           filter: {
             //Configure additional filters here e.g.
@@ -97,7 +95,6 @@ angular.module('WishpointApp.services', [])
             //etc.
           }
         };
-
         var displayBeacons = function(description, watchData) {
           var beacons = watchData.filteredMicroLocation.beacons;
           var beaconNames = [];
@@ -233,7 +230,7 @@ angular.module('WishpointApp.services', [])
           'id': '12634',
           'name': 'Queen Victoria Market',
           'description': '',
-          'imageUrl' : '',
+          'imageUrl' : 'images/well/queenvic.jpg',
           'location': {
             'lat': -37.807520,
             'lng': 144.958179
