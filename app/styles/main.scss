@@ -147,10 +147,26 @@ float: left;
 	color:#4D4D4E;
 }
 
+.wish-view span{
+	display:block;
+	width:100%;
+	height:30px;
+
+	text-align: center;
+
+	font-size: 1.6em;
+	font-weight: 400;
+
+	color:#38A4DC;
+	margin-top:5px;
+}
+
 .wish-view h5{
 	
 	width:100%;
 	text-align: center;
+
+
 
 	color:gray;
 
@@ -265,6 +281,7 @@ float: left;
 	width: 90%;
 	margin-left: 5%;
 	margin-right: 5%;
+<<<<<<< Updated upstream
 	label {
 		border-top: none;
 		border-left: none;
@@ -276,4 +293,74 @@ float: left;
 		margin:0 auto;
 		margin-top:40px;
 	}
+=======
+
+
+
+}
+
+
+.wish-make-action i{
+
+	text-align: center;
+
+	margin-left: 42%;
+
+}
+
+.wish-make-action label{
+	float:left;
+	width:100%;
+
+	border-top: none;
+	border-left: none;
+	border-right: none;
+
+}
+
+.wish-make-action button{
+	display:block;
+
+	width:200px;
+	margin:0 auto;
+	margin-top:40px;
+
+}
+
+
+.wish-make-action textarea{
+
+
+	height:100px;
+
+}
+
+.wish-button{
+
+	width:100%;
+	margin-top: 40px;
+
+}
+
+.wish-confirm{
+
+	width:90%;
+	min-height:160px;
+
+	background-color:#eee;
+	margin: 0 auto;
+
+
+}
+
+.wish-confirm-image img{
+	width:100%;
+
+	overflow: hidden;
+}
+
+.wish-content h5{
+	width:100%;
+
+>>>>>>> Stashed changes
 }

@@ -66,6 +66,14 @@ angular.module('WishpointApp', ['ionic', 'ngCordova', 'uiGmapgoogle-maps', 'conf
     templateUrl: 'templates/make-wish.html'
   });
 
+   $stateProvider .state('confirmation', {
+      url: '/confirmation',
+      //abstract: true,
+      templateUrl: 'templates/confirmation.html'
+    });
+
+
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/map');
 

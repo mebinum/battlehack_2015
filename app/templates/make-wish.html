@@ -1,5 +1,4 @@
 <ion-view title="Wish Point">
-<ion-scroll zooming="true" direction="y" style="width: 500px; height: 700px">
 
 	<div class="wish-view">
 	    <div class="wish-map">
@@ -14,36 +13,29 @@
 	    <h3>South Bank Bridge</h3>
 	    <h2>$1300.90</h2>
 	    <h5>Raised</h5>
-	    <div class="wish-actions">
-	    	<span>
-	    		<h1>23</h1>
-	    		<h5>WISHES</h5>
-	    	</span>
-	    	<i></i>
-	    	<span>
-	    		<h1>23</h1>
-	    		<h5>LIKES</h5>
-	    	</span>
-	    </div>	
-	    <div class="wish-make">
-	    	<div class="wish-make-action">
+	
+	    <ion-scroll zooming="true" direction="y" style="height: 700px">
+		    <div class="wish-make">
+		    	<div class="wish-make-action">
 
-				<div class="list">
-				  <label class="item item-input item-floating-label">
-    				<i class="icon icon--l icon--grey icon--circled mdi mdi--android"></i>
-				    <span class="input-label">Amount</span>
-				    <input type="text" placeholder="Amount">
-				  </label>
-				  <label class="item item-input item-floating-label">
-				    <span class="input-label">Credit Card Number</span>
-				    <input type="text" placeholder="Credit Card Number">
-				  </label>
-				</div>
-			</div>   	
-	    	<a href="#/donate">
-	    		<button class="btn btn--m btn--blue btn--raised" lx-ripple>MAKE A WISH</button>
-	    	</a>
-	    </div>
+					<div class="list">
+						<br />
+					  <label class="item item-input item-floating-label" style="border-bottom:none;">
+					    <i class="icon icon--l icon--blue icon--circled mdi ion-camera"></i>
+					  </label>
+					  <label class="item item-input item-floating-label">
+    					<textarea placeholder="Make a wish or share a story..."></textarea>
+					  </label>
+					</div>
+						<br />
+				<div class="wish-button">
+			    	<a href="#/confirmation">
+			    		<button class="btn btn--m btn--blue btn--raised" lx-ripple>WISH</button>
+			    	</a>
+			    </div>
+				</div>   	
+
+		    </div>
+		</ion>
 	</div>
-</ion>
 </ion-view>
