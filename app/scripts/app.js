@@ -6,7 +6,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('WishpointApp', ['ionic','ngCordova', 'config', 'WishpointApp.controllers', 'WishpointApp.services'])
+angular.module('WishpointApp', ['ionic','ngCordova', 'uiGmapgoogle-maps', 'config', 'WishpointApp.controllers', 'WishpointApp.services'])
 
 .run(function($ionicPlatform,BlueCats) {
   $ionicPlatform.ready(function() {
@@ -36,6 +36,7 @@ angular.module('WishpointApp', ['ionic','ngCordova', 'config', 'WishpointApp.con
     // setup an abstract state for the tabs directive
     .state('map', {
       url: '/map',
+      controller: 'MapCtrl',
       //abstract: true,
       templateUrl: 'templates/map.html'
     });

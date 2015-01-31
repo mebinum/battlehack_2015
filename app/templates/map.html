@@ -4,40 +4,36 @@
   navigation history that also transitions its views in and out.
 -->
 <ion-view title="Dashboard">
-  <div class="map-view">
-    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
-          &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
-          &markers=color:red%7Clabel:C%7C40.718217,-73.998284" >
-
-    <button class="btn btn--xl btn--blue btn--fab map-view-add" lx-ripple><i class="icon ion-plus"></i></button>
-    <div class="list">
-        <a class="item item-avatar" href="#/tab/account">
-          <img src="venkman.jpg">
-          <h2>SOUTHBANK BRIDGE</h2>
-          <p>1.2kms</p>
-        </a>
-        <a class="item item-avatar" href="#">
-          <img src="venkman.jpg">
-          <h2>FITZROY GARDENS</h2>
-          <p>1.5kms</p>
-        </a>
-        <a class="item item-avatar" href="#">
-          <img src="venkman.jpg">
-          <h2>QUEEN STREET MARKET</h2>
-          <p>3.7kms</p>
-        </a>      
-        <a class="item item-avatar" href="#">
-          <img src="venkman.jpg">
-          <h2>TREASURY GARDENS</h2>
-          <p>4.5kms</p>
-        </a>
-        <a class="item item-avatar" href="#">
-          <img src="venkman.jpg">
-          <h2>SOUTHERN CROSS STATION</h2>
-          <p>2.5kms</p>
-        </a>
-
-    </div>
+<ion-scroll zooming="true" direction="y" style="height: 700px">
+  <div class="map-view" ng-init="init()">
+   <div class="no-padding" id="map">
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" dragging="true" options="map.options" events="map.events">
+      <ui-gmap-markers models="map.markers" coords="'coords'" icon="'icon'" fit="true" labelContent="'title'" labelClass="marker-labels" doRebuildAll="true" >
+         
+      </ui-gmap-markers>
+    </ui-gmap-google-map> 
   </div>
+  <button class="btn btn--xl btn--blue btn--fab map-view-add" lx-ripple><i class="icon ion-plus"></i></button>
+  <div class="grid">
+     
+    <div class="grid__col12 well-list">
+                <ion-list class="list">
+          <ion-item ng-repeat="well in wells" class="list-row list-row--has-primary list-row--has-separator" href="#/well/{{well.id}}">
+
+          <div class="list-primary-tile">
+                <img class="list-primary-tile__img" src="/images/2-square.jpg">
+          </div>
+
+          <div class="list-content-tile list-content-tile--two-lines">
+                <strong>{{well.name}}</strong>
+                <p>1.2kms</p>
+          </div>
+            
+          </ion-item>
+        </ion-list>
+      </div>
+  </div>
+  </div>
+  </ion-scroll>
 </ion-view>
 

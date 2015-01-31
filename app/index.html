@@ -16,14 +16,17 @@
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false&amp;key=AIzaSyBJW5_yZuNqXiQVyxtsrJRfNfj_kTdLLcc'></script>
   </head>
 
   <body ng-app="WishpointApp" animation="slide-left-right-ios7">
+    
+
     <!--
       The nav bar that will be updated as we navigate between views.
     -->
     <div class="bar bar-header bar-positive">
-        <img ng-src="images/android-icon.png" />
+        
         <h1 class="title">Discover</h1>
         <button class="button icon ion-more"></button>
     </div>
@@ -49,6 +52,9 @@
     <script src="lib/velocity/velocity.ui.js"></script>
     <script src="lib/moment/moment.js"></script>
     <script src="lib/lumx/dist/js/lumx.js"></script>
+    <script src="lib/lodash/dist/lodash.compat.js"></script>
+    <script src="lib/angular-google-maps/dist/angular-google-maps.js"></script>
+    <script src="lib/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

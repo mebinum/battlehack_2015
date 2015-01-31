@@ -22,6 +22,8 @@
     "angular": false,
     "cordova": false,
     "StatusBar": false,
-    "com": false
+    "com": false,
+    "google": false,
+    "_": false
   }
 }

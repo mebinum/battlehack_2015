@@ -1,7 +1,7 @@
 // Generated on 2015-01-31 using generator-ionic 0.6.1
 'use strict';
 
-var _ = require('lodash');
+var _lo = require('lodash');
 var path = require('path');
 var cordovaCli = require('cordova');
 var spawn = require('child_process').spawn;
@@ -412,12 +412,12 @@ module.exports = function (grunt) {
   });
 
   // Register tasks for all Cordova commands
-  _.functions(cordovaCli).forEach(function (name) {
+  _lo.functions(cordovaCli).forEach(function (name) {
     grunt.registerTask(name, function () {
       this.args.unshift(name.replace('cordova:', ''));
       // Handle URL's being split up by Grunt because of `:` characters
-      if (_.contains(this.args, 'http') || _.contains(this.args, 'https')) {
-        this.args = this.args.slice(0, -2).concat(_.last(this.args, 2).join(':'));
+      if (_lo.contains(this.args, 'http') || _lo.contains(this.args, 'https')) {
+        this.args = this.args.slice(0, -2).concat(_lo.last(this.args, 2).join(':'));
       }
       var done = this.async();
       var exec = process.platform === 'win32' ? 'cordova.cmd' : 'cordova';
@@ -446,7 +446,7 @@ module.exports = function (grunt) {
   grunt.registerTask('ripple-emulator', function () {
     grunt.config.set('watch', {
       all: {
-        files: _.flatten(_.pluck(grunt.config.get('watch'), 'files')),
+        files: _lo.flatten(_lo.pluck(grunt.config.get('watch'), 'files')),
         tasks: ['newer:copy:app', 'prepare']
       }
     });
