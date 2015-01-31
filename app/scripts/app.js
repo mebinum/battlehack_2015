@@ -59,18 +59,17 @@ angular.module('WishpointApp', ['ionic', 'ngCordova', 'uiGmapgoogle-maps', 'conf
     templateUrl: 'templates/donate.html'
   });
 
-
   $stateProvider.state('make-wish', {
     url: '/make-wish',
     //abstract: true,
     templateUrl: 'templates/make-wish.html'
   });
 
-   $stateProvider .state('confirmation', {
-      url: '/confirmation',
-      //abstract: true,
-      templateUrl: 'templates/confirmation.html'
-    });
+  $stateProvider.state('donate', {
+    url: '/donate',
+    controller: 'donateCtrl',
+    templateUrl: 'templates/donate.html'
+  });
 
 
 

@@ -157,4 +157,11 @@ angular.module('WishpointApp.controllers', [])
 	$scope.friend = Friends.get($stateParams.friendId);
 })
 
-.controller('AccountCtrl', function($scope) {});
+.controller('donateCtrl', function($scope) {
+
+		$scope.init = function() {
+
+	
+	
+		};
+});
