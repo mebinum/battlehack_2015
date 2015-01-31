@@ -28,11 +28,11 @@ $origLng = 144.9651480;//floatval($_GET['lng']);
 // -------------------------------------------  
 
 
-	$latPos = $origLat + .5;
-	$latNeg = $origLat - .5;
+	$latPos = $origLat + 1;
+	$latNeg = $origLat - 1;
 
-	$lngPos = $origLng + .5;
-	$lngNeg = $origLng - .5;	
+	$lngPos = $origLng + 1;
+	$lngNeg = $origLng - 1;	
 
 
 
@@ -63,6 +63,8 @@ $origLng = 144.9651480;//floatval($_GET['lng']);
 
 	$result = array();
 	$result['status'] = $status;
+
+	echo count($selected);
 
 	while($row = mysql_fetch_array($selected)){
 		$wishPoint = array();
