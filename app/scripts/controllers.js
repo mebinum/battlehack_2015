@@ -149,19 +149,41 @@ angular.module('WishpointApp.controllers', [])
 		$scope.map.markers.push(marker);
 	};
 })
-.controller('FriendsCtrl', function($scope, Friends) {
-	$scope.friends = Friends.all();
+.controller('WishingCtrl', function($scope, $stateParams, BlueCats) {
+	$scope.init = function() {
+		$scope.well = BlueCats.getWell($stateParams.wellId);
+		$scope.map = {};
+		$scope.map.control = {};
+		$scope.map.center = {
+			'latitude': $scope.well.location.lat,
+			'longitude': $scope.well.location.lng
+		};
+		$scope.map.zoom = 12;
+		$scope.map.markers = [];
+		var marker = {
+			id : $stateParams.wellId,
+			'coords': {
+				'latitude': $scope.well.location.lat,
+				'longitude': $scope.well.location.lng
+			},
+			'icon':{
+				url: 'images/marker.png',
+				scaledSize: new google.maps.Size(25, 30)
+			}
+		};
+		$scope.map.markers.push(marker);
+	};
+})
+.controller('MakeWishCtrl', function($scope, BlueCats,$location) {
+	$scope.makeWish = function(wishForm) {
+		//var wishForm = $scope.wishForm;
+		if (!wishForm.$invalid) {
+			BlueCats.addWish($scope.well.id,$scope.wishStory);
+			$location.path('/feed');
+		}
+	};
 })
 
 .controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
 	$scope.friend = Friends.get($stateParams.friendId);
-})
-
-.controller('donateCtrl', function($scope) {
-
-		$scope.init = function() {
-
-	
-	
-		};
 });

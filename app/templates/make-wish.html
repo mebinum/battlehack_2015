@@ -1,41 +1,47 @@
-<ion-view title="Wish Point">
-
+<ion-view title="Wish Point" ng-init="init()">
+<ion-scroll zooming="true" direction="y" style="height: 700px" >
 	<div class="wish-view">
 	    <div class="wish-map">
-	    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
-	          &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
-	          &markers=color:red%7Clabel:C%7C40.718217,-73.998284" >
-	     </div>
-	    <div class="wish-image">
-	    	 <img class="list-primary-tile__img" src="images/southbank.jpg">
-
+		    <!-- map begin -->
+		    <ui-gmap-google-map  center="map.center" zoom="map.zoom" control="map.control" draggable="true">
+			      <ui-gmap-markers models="map.markers" coords="'coords'" icon="'icon'">
+			      </ui-gmap-markers>
+			    </ui-gmap-google-map>
 	    </div>
-	    <h3>South Bank Bridge</h3>
-	    <h2>$1300.90</h2>
-	    <h5>Raised</h5>
-	
-	    <ion-scroll zooming="true" direction="y" style="height: 700px">
-		    <div class="wish-make">
-		    	<div class="wish-make-action">
+	    <div class="wish-image">
+	    	 <img class="list-primary-tile__img" src="{{well.imageUrl}}">
+	    </div>
+	   <!-- well details -->
+	    <div class="well-details">
+		    <h3 class="name">{{well.name}}</h3>
+		    <h2>${{well.totalRaised | number:2}}</h2>
+		    <h5>Raised</h5>
+	   </div>
+	   <!-- well details -->
 
-					<div class="list">
-						<br />
-					  <label class="item item-input item-floating-label" style="border-bottom:none;">
-					    <i class="icon icon--l icon--blue icon--circled mdi ion-camera"></i>
-					  </label>
-					  <label class="item item-input item-floating-label">
-    					<textarea placeholder="Make a wish or share a story..."></textarea>
-					  </label>
-					</div>
-						<br />
-				<div class="wish-button">
-			    	<a href="#/confirmation">
-			    		<button class="btn btn--m btn--blue btn--raised" lx-ripple>WISH</button>
-			    	</a>
-			    </div>
-				</div>   	
+	   <!-- make wish form -->
+	   <form name="wishForm" class="reg-form" novalidate ng-submit="makeWish(wishForm)" ng-controller="MakeWishCtrl">
 
-		    </div>
-		</ion>
+	   	  <div class="wish-make">
+	    	<div class="wish-make-action">
+				<div class="list">
+					<br />
+				  <label class="item item-input item-floating-label" style="border-bottom:none;">
+				    <i class="icon icon--l icon--blue icon--circled mdi ion-camera"></i>
+				  </label>
+				  <label class="item item-input item-floating-label">
+					<textarea id="wishStory" name="wishStory" ng-model="wishStory" required placeholder="Make a wish or share a story..."></textarea>
+				  </label>
+				</div>
+					
+			</div>
+			<div class="wish-button">
+			<br />
+			<br />
+		    	<button type="submit" class="btn btn--m btn--blue btn--raised" lx-ripple>Make a Wish</button>
+		    </div>  	
+	    </div>
+	   </form>
 	</div>
+</ion-scroll>
 </ion-view>

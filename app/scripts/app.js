@@ -60,11 +60,10 @@ angular.module('WishpointApp', ['ionic', 'ngCordova', 'uiGmapgoogle-maps', 'conf
   });
 
   $stateProvider.state('make-wish', {
-    url: '/make-wish',
-    //abstract: true,
+    url: '/make-wish/:wellId',
+    controller: 'WishingCtrl',
     templateUrl: 'templates/make-wish.html'
   });
-
 
   $stateProvider.state('feed', {
     url: '/feed',
@@ -77,8 +76,6 @@ angular.module('WishpointApp', ['ionic', 'ngCordova', 'uiGmapgoogle-maps', 'conf
     //abstract: true,
     templateUrl: '/phpServer/classes/donate/donate.php'
   });
-
-
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/map');

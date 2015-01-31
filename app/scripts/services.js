@@ -36,6 +36,7 @@ angular.module('WishpointApp.services', [])
     //Update with the api token for your app from https://app.bluecats.com
     var blueCatsAppToken = '14635b84-f008-42b3-9370-c1c11b41c374';
     var beaconsObjs = {};
+    var feedId = 1934;
     var wells = [{
       'id': '1223',
       'name': 'Southbank Footbridge',
@@ -73,7 +74,8 @@ angular.module('WishpointApp.services', [])
       },
       'totalRaised': 1700.00,
       'wishCount': 11,
-      'likeCount': 45
+      'likeCount': 45,
+      'feed': []
     }, {
       'id': '1323',
       'name': 'Federation Square Arena',
@@ -85,7 +87,8 @@ angular.module('WishpointApp.services', [])
       },
       'totalRaised': 8900.00,
       'wishCount': 89,
-      'likeCount': 145
+      'likeCount': 145,
+      'feed': []
     }, {
       'id': '1234',
       'name': 'SouthGate Statue',
@@ -97,7 +100,8 @@ angular.module('WishpointApp.services', [])
       },
       'totalRaised': 7803.00,
       'wishCount': 123,
-      'likeCount': 563
+      'likeCount': 563,
+      'feed': []
     }, {
       'id': '12634',
       'name': 'Queen Victoria Market',
@@ -109,7 +113,8 @@ angular.module('WishpointApp.services', [])
       },
       'totalRaised': 4590.00,
       'wishCount': 33,
-      'likeCount': 45
+      'likeCount': 45,
+      'feed': []
     }, {
       'id': '12634',
       'name': 'Fitzroy Gardens Pavillion',
@@ -121,7 +126,8 @@ angular.module('WishpointApp.services', [])
       },
       'totalRaised': 8932.00,
       'wishCount': 11,
-      'likeCount': 28
+      'likeCount': 28,
+      'feed': []
     }];
     var app = {
       // deviceready Event Handler
@@ -255,6 +261,20 @@ angular.module('WishpointApp.services', [])
         return _.findWhere(wells, {
           'id': index
         });
+      },
+      addWish: function(wellId,wish) {
+        var well = app.getWell(wellId);
+        well.feed.push({
+          'id': feedId + 1,
+          'uId': 1245533,
+          'userName': 'Christopher Bartlett',
+          'userImageUrl': 'images/user/christopher.jpg',
+          'title': wish.substring(0, 20),
+          'text': wish,
+          'imageUrl': 'images/feed/sunset.jpg'
+        });
+        //console.log(JSON.stringify(wells));
+        return true;
       }
     };
     return app;
