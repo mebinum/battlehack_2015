@@ -46,9 +46,22 @@ angular.module('WishpointApp.services', [])
           'lat': -37.819557,
           'lng': 144.965148
         },
+       'charity': {
+          'id': -37.819557,
+          'name': 144.965148,
+          'imgUrl': "images/charity/concern.jpg"
+        },
         'totalRaised' : 1300.00,
         'wishCount' : 50,
-        'likeCount' : 13
+        'likeCount' : 13,
+        'feed': {[
+                  {
+              'uId': -37.819557,
+            'userName': 144.965148,
+            'userImageUrl': "images/charity/concern.jpg",
+            'wish':"Hello World",
+            'imageUrl':"images/wish/sunset.jpeg"
+          ]},
       }, {
         'id': '123',
         'name': 'Collins Street Wishing Wall',
