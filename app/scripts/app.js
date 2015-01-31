@@ -65,12 +65,6 @@ angular.module('WishpointApp', ['ionic', 'ngCordova', 'uiGmapgoogle-maps', 'conf
     templateUrl: 'templates/make-wish.html'
   });
 
-  $stateProvider.state('donate', {
-    url: '/donate',
-    controller: 'donateCtrl',
-    templateUrl: 'templates/donate.html'
-  });
-
 
 
   // if none of the above states are matched, use this as the fallback
