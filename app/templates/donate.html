@@ -18,24 +18,15 @@
 	    <h5>Raised for</h5>
  		<div class="wish-make">
 	    	<img src="images/concern.jpg">
-	    	<h5>To unlock this Wish Point please make a donation</h5>
+	    	<h5>To unlock this Wish Point please make a $1 donation</h5>
 	    </div>
-	    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
-		<form id="checkout" method="post" action="/checkout">
-		  <div id="dropin"></div>
-		  <input type="submit" value="Pay $10">
-		</form>
-<!--
-		<script>
-
-			braintree.setup(
-			  "MIIBCgKCAQEAwpN88KQ3BvlFkLl/8X/C+fazfAoPWFdHrPdLrOix7fr8EaWeYw8b7Pf48KEweQdxBa28eLYCR+Lp28q8OS9N1cDjkVwx22IJ2lP5wkqqUvIgyCytJMfr6XKOolaToZoQGxglB6aSLgG9WbdsfqhQeXg8FropQwJn15ix3wlrRpqa3ofLfspVU6Pt/qBuMn7+Kqu/QQurQrB+SXf0HVBUpvn4JB5THg/sT0Ix/GjcK5N2np0fiD5QLLCARV17TrwC8ykK9p5ve++hKTl9XDx9SsRfSC6lAPOpb7reEJghv5aOjbg3pprTuPiePHnbgtltxSEfE7yv2JoezoEnKvP2zwIDAQAB",
-			  'dropin', {
-			    container: 'dropin'
-			  });
-		
-		</script>
--->
+		<iframe style="display:block; width:400px; height:180px; margin:0 auto;" src="http://www.wishpoint.org/server/classes/donate/form.html"></iframe>
+		<div class="wish-button">
+	    	<a style="text-decoration:none;" href="#/make-wish">
+	    		<button style="display:block; text-decoration:none; width:200px; margin:0 auto;" class="btn btn--m btn--blue btn--raised" lx-ripple>WISH</button>
+	    	</a>
+	    </div>
 	</div>
+
 </ion-scroll>
 </ion-view>
