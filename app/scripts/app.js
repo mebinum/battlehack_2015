@@ -28,13 +28,38 @@ angular.module('WishpointApp', ['ionic', 'config', 'WishpointApp.controllers', '
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
-  $stateProvider
+  $stateProvider;
 
     // setup an abstract state for the tabs directive
-    .state('map', {
+    $stateProvider.state('map', {
       url: '/map',
       //abstract: true,
       templateUrl: 'templates/map.html'
+    });
+
+   $stateProvider .state('splash', {
+      url: '/splash',
+      //abstract: true,
+      templateUrl: 'templates/splash.html'
+    });
+
+   $stateProvider .state('wish', {
+      url: '/wish',
+      //abstract: true,
+      templateUrl: 'templates/wish.html'
+    });
+
+   $stateProvider .state('donate', {
+      url: '/donate',
+      //abstract: true,
+      templateUrl: 'templates/donate.html'
+    });
+
+
+   $stateProvider .state('make-wish', {
+      url: '/make-wish',
+      //abstract: true,
+      templateUrl: 'templates/make-wish.html'
     });
 
 

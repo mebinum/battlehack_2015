@@ -4,40 +4,51 @@
   navigation history that also transitions its views in and out.
 -->
 <ion-view title="Dashboard">
+<ion-scroll zooming="true" direction="y" style="width: 500px; height: 700px">
+
   <div class="map-view">
-    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
+      <img  src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
           &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
           &markers=color:red%7Clabel:C%7C40.718217,-73.998284" >
-
-    <button class="btn btn--xl btn--blue btn--fab map-view-add" lx-ripple><i class="icon ion-plus"></i></button>
-    <div class="list">
-        <a class="item item-avatar" href="#/tab/account">
-          <img src="venkman.jpg">
-          <h2>SOUTHBANK BRIDGE</h2>
-          <p>1.2kms</p>
-        </a>
-        <a class="item item-avatar" href="#">
-          <img src="venkman.jpg">
-          <h2>FITZROY GARDENS</h2>
-          <p>1.5kms</p>
-        </a>
-        <a class="item item-avatar" href="#">
-          <img src="venkman.jpg">
-          <h2>QUEEN STREET MARKET</h2>
-          <p>3.7kms</p>
-        </a>      
-        <a class="item item-avatar" href="#">
-          <img src="venkman.jpg">
-          <h2>TREASURY GARDENS</h2>
-          <p>4.5kms</p>
-        </a>
-        <a class="item item-avatar" href="#">
-          <img src="venkman.jpg">
-          <h2>SOUTHERN CROSS STATION</h2>
-          <p>2.5kms</p>
-        </a>
-
-    </div>
+        <button class="btn btn--xl btn--blue btn--fab map-view-add" lx-ripple><i class="icon ion-plus"></i></button>
+        <div class="list">
+            <a class="item item-avatar" href="#/wish">
+              <img src="venkman.jpg">
+              <h2>SOUTHBANK BRIDGE</h2>
+              <p>1.2kms</p>
+            </a>
+            <a class="item item-avatar" href="#">
+              <img src="venkman.jpg">
+              <h2>FITZROY GARDENS</h2>
+              <p>1.5kms</p>
+            </a>
+            <a class="item item-avatar" href="#">
+              <img src="venkman.jpg">
+              <h2>QUEEN STREET MARKET</h2>
+              <p>3.7kms</p>
+            </a>      
+            <a class="item item-avatar" href="#">
+              <img src="venkman.jpg">
+              <h2>TREASURY GARDENS</h2>
+              <p>4.5kms</p>
+            </a>
+            <a class="item item-avatar" href="#">
+              <img src="venkman.jpg">
+              <h2>SOUTHERN CROSS STATION</h2>
+              <p>2.5kms</p>
+            </a>
+            <a class="item item-avatar" href="#">
+              <img src="venkman.jpg">
+              <h2>SOUTHERN CROSS STATION</h2>
+              <p>2.5kms</p>
+            </a>
+            <a class="item item-avatar" href="#">
+              <img src="venkman.jpg">
+              <h2>SOUTHERN CROSS STATION</h2>
+              <p>2.5kms</p>
+            </a>
+        </div>
+    </ion>
   </div>
 </ion-view>
 

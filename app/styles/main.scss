@@ -8,18 +8,26 @@ body{
 
 	background-color: #38A4DC;
 
-
 }
 
 
 /* HEADER STYLES */
 
-.header{
+.bar-header{
 
 	background-color: #38A4DC;
 
 
 }
+
+.bar-header img{
+
+	width:30px;
+
+	margin:2.5px;
+
+}
+
 
 .bar-positive{
 
@@ -39,26 +47,50 @@ body{
 	}
 
 /* SPLASH SCREEN */
-.splash{
+.splash-view{
 
 	width:100%;
-	height:200px;
+	height:100%;
+
+	position: relative;
 
 	margin:0;
 	padding:0;
 
 	background-color: #38A4DC;
 
+}
+
+.splash-view img{
+
+	display:block;
+
+	width:200px;
+	margin:0 auto;
+	padding-top:100px;
+	background-color: #38A4DC;
 
 }
 
+.splash-view h1{
+
+	color:#fff;
+
+	text-align: center;
+}
+
 /* MAP-VIEW SCREEN */
+
+
+
 
 .map-view{
 
 	position:relative;
 
 }
+
+
 
 .map-view-add{
 
@@ -72,3 +104,261 @@ body{
 .ion-nav-view {
 background-color: white !important;
 }
+
+
+/* WISH-VIEW SCREEN */
+
+.wish-view{
+
+position: relative;
+
+}
+
+.wish-map{
+
+	z-index: 1;
+
+}
+
+.wish-map img{
+
+	height:200px;
+
+}
+
+.wish-image{
+
+	width:100px;
+	height:100px;
+
+	background-color:#eee;
+
+	border-radius:50%;
+
+	margin:0 auto;
+	margin-top:-50px;
+}
+
+.wish-image img{
+
+	width:200px;
+	height:100px;
+	border-radius:50%;
+
+
+}
+
+.wish-view h3{
+	
+	width:100%;
+	height:30px;
+
+	text-align: center;
+
+	color:#4D4D4E;
+	margin-top:5px;
+}
+
+.wish-view h2{
+	
+	width:100%;
+	height:35px;
+	text-align: center;
+	margin-top:0px;
+
+	color:#4D4D4E;
+
+}
+
+.wish-view h5{
+	
+	width:100%;
+	text-align: center;
+
+	color:gray;
+
+}
+
+.wish-actions{
+
+	width:90%;
+	height:60px;
+
+	background-color:#fff;
+
+	margin-left: 5%;
+	margin-right: 5%;
+
+	border-bottom: 2px solid #eee;
+}
+
+.wish-actions span{
+	display:block;
+	float:left;
+
+	width:29%;
+	height:80%;
+
+	margin:10%;
+	margin-top: 5px;
+
+	border-right:5% solid #eee;
+
+}
+
+.wish-actions h1{
+
+	height:35px;
+
+	text-align: center;
+
+
+}
+
+.wish-actions h5{
+
+	text-align: center;
+
+
+}
+
+.wish-actions i{
+	display:block;
+	float:left;
+	width:1%;
+	height:55px;
+
+
+	background-color: #eee;
+
+}
+
+/* WISH-MAKE SCREEN */
+
+.wish-make{
+	width: 100%;
+	min-height:50px;
+
+
+}
+
+.wish-make img{
+
+	display: block;
+
+	width:100px;
+
+	margin:0 auto;
+
+}
+
+.wish-make h5{
+
+	margin-top:5px;
+	margin-bottom:20px;
+
+}
+
+.wish-make button{
+	display:block;
+
+	width:200px;
+	margin:0 auto;
+
+}
+
+.wish-make a {
+
+	text-decoration: none;
+
+}
+
+/* WISH-DONATE SCREEN */
+
+.wish-donate{
+
+	width: 90%;
+
+	margin-left: 5%;
+	margin-right: 5%;
+
+
+
+}
+
+.wish-donate-half{
+	display: block;
+	float:left;
+	width:40%;
+
+	margin-right: 5%
+
+
+}
+
+.wish-donate label{
+
+	border-top: none;
+	border-left: none;
+	border-right: none;
+
+}
+
+.wish-donate button{
+	display:block;
+
+	width:200px;
+	margin:0 auto;
+	margin-top:40px;
+
+}
+
+.wish-donate a{
+
+	text-decoration:none;
+
+}
+
+
+/* WISH-MAKE-ACTION SCREEN */
+
+.wish-make-action{
+
+	width: 90%;
+
+	margin-left: 5%;
+	margin-right: 5%;
+
+
+
+}
+
+.wish-make-action label{
+
+	border-top: none;
+	border-left: none;
+	border-right: none;
+
+}
+
+.wish-make-action button{
+	display:block;
+
+	width:200px;
+	margin:0 auto;
+	margin-top:40px;
+
+}
+
+
+.wish-make-action button{
+	display:block;
+
+	width:200px;
+	margin:0 auto;
+	margin-top:40px;
+
+}
+
+
+
