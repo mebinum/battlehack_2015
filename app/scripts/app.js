@@ -31,7 +31,7 @@ angular.module('WishpointApp', ['ionic', 'ngCordova', 'uiGmapgoogle-maps', 'conf
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
-  $stateProvider;
+  //$stateProvider;
 
   // setup an abstract state for the tabs directive
   $stateProvider.state('map', {
@@ -54,8 +54,8 @@ angular.module('WishpointApp', ['ionic', 'ngCordova', 'uiGmapgoogle-maps', 'conf
   });
 
   $stateProvider.state('donate', {
-    url: '/donate',
-    //abstract: true,
+    url: '/donate/:wellId',
+    controller: 'DonateCtrl',
     templateUrl: 'templates/donate.html'
   });
 

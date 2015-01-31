@@ -1,9 +1,10 @@
 // Your application styles go here
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,900,100,700,400|Roboto+Condensed:400,700);
 /* ELEMENT STYLES */
 body{
 	background-color: #38A4DC;
+	font-family: 'Roboto', sans-serif;
 }
-
 
 /* HEADER STYLES */
 
@@ -59,6 +60,8 @@ body{
 }
 
 /* MAP-VIEW SCREEN */
+.angular-google-map-container { height: 300px; }
+
 .map-view{
 	position:relative;
 	.map-view-add {
@@ -67,7 +70,7 @@ body{
 		right:10px;
 		z-index:100;
 	}
-	.angular-google-map-container { height: 300px; }
+	
 	.well-list {
 		.item-content {
 			.list-content-tile {
@@ -93,6 +96,7 @@ body{
 
 .wish-map {
 	z-index: 1;
+	.angular-google-map-container { height: 200px; }
 }
 
 .wish-map img{
@@ -100,17 +104,23 @@ body{
 }
 
 .wish-image{
-
 	width:100px;
 	height:100px;
-
 	background-color:#eee;
-
 	border-radius:50%;
-
 	margin:0 auto;
 	margin-top:-50px;
+	z-index: 1;
+	position: relative
 }
+/*.navbar .pheets-logo {
+margin: 0 auto;
+
+padding: 0;
+width: 80%;
+float: left;
+;
+}*/
 
 .wish-image img{
 
@@ -146,27 +156,33 @@ body{
 
 }
 
-.wish-actions{
+.well-details {
+	padding-top: 20px;
+}
 
+.wish-actions{
 	width:90%;
 	height:60px;
-
 	background-color:#fff;
-
 	margin-left: 5%;
 	margin-right: 5%;
-
 	border-bottom: 2px solid #eee;
+	padding-bottom: 14px;
+	padding-top: 14px;
+	display: inline-table;
 }
 
 .wish-actions span{
 	display:block;
 	float:left;
-	width:29%;
+	width:50%;
 	height:80%;
-	margin:10%;
-	margin-top: 5px;
-	border-right:5% solid #eee;
+	padding-top: 15px;
+	padding-bottom: 25px;
+	&.left {
+		border-right:2px solid #eee;
+	}
+	
 }
 
 .wish-actions h1{
@@ -178,19 +194,20 @@ body{
 	text-align: center;
 }
 
-.wish-actions i{
+/*.wish-actions i{
 	display:block;
 	float:left;
 	width:1%;
 	height:55px;
 	background-color: #eee;
-}
+}*/
 
 /* WISH-MAKE SCREEN */
 
 .wish-make {
 	width: 100%;
 	min-height:50px;
+	padding-top: 25px;
 	img {
 		display: block;
 		width:100px;
