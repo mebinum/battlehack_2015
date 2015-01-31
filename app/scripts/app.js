@@ -6,9 +6,9 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('WishpointApp', ['ionic', 'config', 'WishpointApp.controllers', 'WishpointApp.services'])
+angular.module('WishpointApp', ['ionic','ngCordova', 'config', 'WishpointApp.controllers', 'WishpointApp.services'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform,BlueCats) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -19,6 +19,9 @@ angular.module('WishpointApp', ['ionic', 'config', 'WishpointApp.controllers', '
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    BlueCats.onDeviceReady();
+
   });
 })
 

@@ -1,5 +1,12 @@
 <ion-view title="Dashboard">
   <ion-content class="has-header padding">
-    <h1>Dash</h1>
+    <h1>Beacons</h1>
+    <div>{{eventReceived}}</div>
+    <ion-list>
+		<ion-item class="item-icon-right" ng-repeat="beacon in beacons" type="item-text-wrap">
+		        {{beacon}}
+		        <i class="icon ion-chevron-right icon-accessory"></i>
+		</ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

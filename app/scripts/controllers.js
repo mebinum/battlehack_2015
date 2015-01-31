@@ -1,7 +1,12 @@
 'use strict';
 angular.module('WishpointApp.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('DashCtrl', function($scope,BlueCats) {
+	$scope.beacons = BlueCats.allBeacons();
+	$scope.$on('bc_receivedevent', function(event,data) {
+		console.log(data);
+		$scope.eventReceived = data.msg;
+	}, true);
 })
 
 .controller('FriendsCtrl', function($scope, Friends) {
