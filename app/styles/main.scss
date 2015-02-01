@@ -6,6 +6,19 @@ body{
 	font-family: 'Roboto', sans-serif;
 }
 
+.wishpoint {
+	.bar.bar-positive {
+		border-color: #38A4DC;
+		background-color: #38A4DC;
+		background-image: linear-gradient(0deg, #145fd7, #145fd7 50%, transparent 50%);
+		color: #fff;
+		height: 50px;
+	}
+	.logo{
+		height: 44px;
+		width: 44px;
+	}
+}
 /* HEADER STYLES */
 
 .header{
@@ -166,19 +179,16 @@ float: left;
 }
 
 .wish-view h5{
-	
 	width:100%;
 	text-align: center;
-
-
-
 	color:gray;
-
 }
 
 .well-details {
 	padding-top: 20px;
 }
+
+
 
 .wish-actions{
 	width:90%;
@@ -367,4 +377,22 @@ float: left;
 	height:200px;
 
 	background-color:#eee;
+
+	.wish-text {
+		position: absolute;
+		top:20px;
+		padding: 25px;
+		min-height: 60%;
+		.fs-subhead {
+			margin-top: 15px
+		}
+		.paragraph p{
+			font-size: 24px;
+			line-height: 32px;
+		}
+		.caption {
+			color: rgba(255, 255, 255, 0.99)!important;
+			text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.75);
+		}
+	}
 }

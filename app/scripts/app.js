@@ -80,16 +80,16 @@ angular.module('WishpointApp', ['ionic', 'ngCordova', 'uiGmapgoogle-maps', 'conf
   });
 
   $stateProvider.state('feed', {
-    url: '/feed',
-    //abstract: true,
+    url: '/feed/:wellId',
+    controller: 'FeedCtrl',
     templateUrl: 'templates/feed.html'
   });
 
-  $stateProvider.state('checkout', {
-    url: '/checkout',
-    //abstract: true,
-    templateUrl: 'http://www.wishpoint.org/server/classes/donate/donate.php'
-  });
+  // $stateProvider.state('checkout', {
+  //   url: '/checkout',
+  //   //abstract: true,
+  //   templateUrl: 'http://www.wishpoint.org/server/classes/donate/donate.php'
+  // });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/map');

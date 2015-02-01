@@ -183,7 +183,32 @@ angular.module('WishpointApp.controllers', [])
 		}
 	};
 })
-
+.controller('FeedCtrl', function($scope, $stateParams, BlueCats) {
+	$scope.init = function() {
+		$scope.well = BlueCats.getWell($stateParams.wellId);
+		$scope.feeds = $scope.well.feeds;
+		$scope.map = {};
+		$scope.map.control = {};
+		$scope.map.center = {
+			'latitude': $scope.well.location.lat,
+			'longitude': $scope.well.location.lng
+		};
+		$scope.map.zoom = 12;
+		$scope.map.markers = [];
+		var marker = {
+			id : $stateParams.wellId,
+			'coords': {
+				'latitude': $scope.well.location.lat,
+				'longitude': $scope.well.location.lng
+			},
+			'icon':{
+				url: 'images/marker.png',
+				scaledSize: new google.maps.Size(25, 30)
+			}
+		};
+		$scope.map.markers.push(marker);
+	};
+})
 .controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
 	$scope.friend = Friends.get($stateParams.friendId);
 });
