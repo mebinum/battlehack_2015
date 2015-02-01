@@ -30,23 +30,24 @@
 		    <div class="wish-feed">
 					<div class="grid">
 					    <div class="grid__col12">
-					        <div class="card">
-					            <div class="card__img card__img--top">
-					                <img src="images/feed/southbank/sunset.jpg">
-									<div class="wish-text">                
- 										<span class="fs-subhead caption display-block">Lorem Ipsum</span>
-						                <div class="paragraph caption">
-						                    <p>
-						                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tristique orci a lacinia malesuada.
-						                    </p>
-						                </div>
-
+					    <div  ng-repeat="wish in feed"  class="card">
+						  <div class="card__img card__img--top">
+						     <img class="card__img--main" alt="{{wish.title}}" src="{{getImageUrl(wish)}}"/>
+								<div class="wish-text">                
+										<span class="fs-subhead caption display-block">{{wish.title}}</span>
+					                <div class="paragraph caption">
+					                    <p>
+					         				{{wish.text}}
+					                    </p>
 					                </div>
-					                <span class="fs-headline tc-white-1 display-block">Christopher Bartlett</span>
-					            </div>
 
-					            
-					        </div>
+				                </div>
+				                <span class="fs-headline tc-white-1 display-block">
+				                	{{wish.userName}}
+				                </span>
+						  </div>
+						</div>
+
 					    </div>
 
 					</div>

@@ -179,14 +179,14 @@ angular.module('WishpointApp.controllers', [])
 		//var wishForm = $scope.wishForm;
 		if (!wishForm.$invalid) {
 			BlueCats.addWish($scope.well.id,$scope.wishStory);
-			$location.path('/feed');
+			$location.path('/feed/'+$scope.well.id);
 		}
 	};
 })
 .controller('FeedCtrl', function($scope, $stateParams, BlueCats) {
 	$scope.init = function() {
 		$scope.well = BlueCats.getWell($stateParams.wellId);
-		$scope.feeds = $scope.well.feeds;
+		$scope.feed = [];
 		$scope.map = {};
 		$scope.map.control = {};
 		$scope.map.center = {
@@ -207,6 +207,14 @@ angular.module('WishpointApp.controllers', [])
 			}
 		};
 		$scope.map.markers.push(marker);
+		$scope.feed = $scope.well.feed;
+	};
+	$scope.getImageUrl = function(wish) {
+		if (_.isNull(wish.imageUrl) || _.isUndefined(wish.imageUrl)) {
+			return 'images/feed/southbank/sunset.jpg';
+		} else {
+			return wish.imageUrl;
+		}
 	};
 })
 .controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {

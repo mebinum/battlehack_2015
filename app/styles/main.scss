@@ -377,18 +377,21 @@ float: left;
 	height:200px;
 
 	background-color:#eee;
-
+	.card__img--main {
+		max-height: 300px;
+		width: 100%;
+	}
 	.wish-text {
 		position: absolute;
 		top:20px;
 		padding: 25px;
-		min-height: 60%;
+		min-height: 80%;
 		.fs-subhead {
 			margin-top: 15px
 		}
 		.paragraph p{
-			font-size: 24px;
-			line-height: 32px;
+			font-size: 16px;
+			line-height: 18px;
 		}
 		.caption {
 			color: rgba(255, 255, 255, 0.99)!important;
